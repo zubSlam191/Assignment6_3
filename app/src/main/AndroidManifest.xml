@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.zubair.myapplication" >
+
+    <application
+        android:name="com.emailprocessing.email.conf.util.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Email Manager"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.emailprocessing.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.emailprocessing.ActivateActivity"
+            android:label="Go back to Login" />
+        <activity
+            android:name="com.emailprocessing.CreateEmail"
+            android:label="Go back to Login" />
+        <activity
+            android:name="com.emailprocessing.PreviewSend"
+            android:label="Go back to Login" />
+        <activity
+            android:name="com.emailprocessing.SentMail"
+            android:label="Go back to Login" />
+        <activity android:name="com.emailprocessing.AndroidDatabaseManager" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.emailprocessing.email.services.emails.Impl.EmailBoundService"></service>
+        <service android:name="com.emailprocessing.email.services.emails.Impl.SortService" />
+        <service android:name="com.emailprocessing.email.services.emails.Impl.EmailDeletedService"></service>
+        <service android:name="com.emailprocessing.email.services.emails.Impl.EmailFoundService"></service>
+        <service android:name="com.emailprocessing.email.services.emails.Impl.EmailSavedService"></service>
+        <service android:name="com.emailprocessing.email.services.emails.Impl.EmailsCountService"></service>
+        <service android:name="com.emailprocessing.email.services.emails.Impl.ConfirmSortingBusinessService"></service>
+        <service android:name="com.emailprocessing.email.services.emails.Impl.ConfirmSortingGmailService"></service>
+        <service android:name="com.emailprocessing.email.services.emails.Impl.ConfirmSortingOutlookService"></service>
+        <service android:name="com.emailprocessing.email.services.emails.Impl.MailEntryAddService"></service>
+    </application>
+
+    <resources>
+        <string-array android:name="spinnerArray">
+            <item>GMail</item>
+        <item>Business</item>
+        </string-array>string-array>
+    </resources>
+
+</manifest>
